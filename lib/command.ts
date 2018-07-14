@@ -18,6 +18,7 @@ export class Command {
   public static ESC_minus          = (n: number): number[] => [Command.ESC, 0x2D, n]; // ESC-n
   public static ESC_rev            = (n: number): number[] => [Command.ESC, 0x7B, n]; // ESC{n
   public static ESC_a              = (n: number): number[] => [Command.ESC, 0x61, n]; // ESCan
+  public static ESC_ak             = (n: number): number[] => [Command.ESC, 0x2A, n]; // ESC*n
   public static ESC_d              = (n: number): number[] => [Command.ESC, 0x64, n]; // ESCdn
   public static ESC_E              = (n: number): number[] => [Command.ESC, 0x45, n]; // ESCEn
   public static ESC_G              = (n: number): number[] => [Command.ESC, 0x47, n]; // ESCGn

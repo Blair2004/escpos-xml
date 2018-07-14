@@ -7,8 +7,12 @@
     "module": "commonjs",
     "moduleResolution": "node",
     "sourceMap": true,
-    "target": "es5",
-    "outDir": "./dist/"
+    "target": "es2015",
+    "outDir": "./dist/",
+    "lib": [
+      "es2017",
+      "dom"
+    ]
   },
   "include": [
     "lib/**/*.ts"

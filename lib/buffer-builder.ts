@@ -141,7 +141,7 @@ export class BufferBuilder {
     return this;
   }
 
-  public build(): number[] {
+  public build(): Buffer {
     if (this.defaultSettings) {
       this.lineFeed();
       this.buffer.write(Command.ESC_init);
@@ -159,7 +159,14 @@ export class BufferBuilder {
     return this;
   }
 
-
+  /**
+   * Print Image
+   * @return BufferBuilder
+   */
+  public printImage(): BufferBuilder {
+    this.buffer.write(Command.ESC_ak);
+    return this;
+  }
 }
 
 export enum UNDERLINE_MODE {
